@@ -14,7 +14,8 @@ const cookieOptions = {
 const connectDB = async () => {
   try {
         const { connection } = await mongoose.connect(
-          process.env.MONGODB_URI || `mongodb://127.0.0.1:27017/chattyapp`
+          process.env.MONGODB_URI ||
+            `mongodb+srv://<chat-application>:<chat-application-pass>@cluster0.faghjic.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
         );
 
         if (connection) {
